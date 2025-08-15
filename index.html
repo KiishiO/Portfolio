@@ -108,6 +108,13 @@
         .chapter-5-bg {
             background: 
                 linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)),
+                url('./assets/comic-panel-multi-2.jpg') center/cover;
+            background-color: red;
+        }
+        
+        .chapter-6-bg {
+            background: 
+                linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)),
                 url('./assets/comic-panel-multi.jpg') center/cover;
             background-color: #6a4c93;
         }
@@ -282,6 +289,33 @@
             animation-delay: 0.5s;
         }
         
+        .sound-secure {
+            font-size: 2rem;
+            color: #8b5cf6;
+            top: 20%;
+            right: 12%;
+            transform: rotate(-12deg);
+            animation-delay: 0.8s;
+        }
+        
+        .sound-protected {
+            font-size: 1.8rem;
+            color: #10b981;
+            bottom: 30%;
+            left: 10%;
+            transform: rotate(18deg);
+            animation-delay: 1.5s;
+        }
+        
+        .sound-defended {
+            font-size: 2.1rem;
+            color: #ef4444;
+            top: 50%;
+            right: 8%;
+            transform: rotate(-8deg);
+            animation-delay: 2.2s;
+        }
+        
         .stats-box {
             background: rgba(255, 255, 255, 0.9);
             border: 3px solid #333;
@@ -315,6 +349,10 @@
             animation: badgeGlow 3s ease-in-out infinite;
             box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
             text-shadow: 0 1px 1px rgba(255, 255, 255, 0.5);
+        }
+        
+        .cyber-badge {
+            background: linear-gradient(45deg, #f8b704, #ffdd1f);
         }
         
         .projects-grid {
@@ -611,7 +649,7 @@
                 font-size: 1.5rem !important;
             }
             
-            .sound-boom, .sound-pow, .sound-zap, .sound-bang {
+            .sound-boom, .sound-pow, .sound-zap, .sound-bang, .sound-secure, .sound-protected, .sound-defended {
                 font-size: 1.5rem !important;
             }
         }
@@ -703,7 +741,7 @@
             </div>
             
             <p class="story-text">
-                Once upon a time, there was a student named Kiishi who thought computers were just for social media and Netflix...
+                Once upon a time, there was a <strong>junior</strong> named Kiishi who thought computers were just for social media and Netflix...
                 <br><br>
                 <strong>UNTIL ONE FATEFUL DAY!</strong> 🎭
                 <br><br>
@@ -712,6 +750,10 @@
             </p>
             
             <div class="stats-box">
+                <div class="stat-item">
+                    <span>Current Status:</span>
+                    <span>🎮 Junior Year - Leveling Up!</span>
+                </div>
                 <div class="stat-item">
                     <span>Excitement Level:</span>
                     <span>📈 OVER 9000!</span>
@@ -723,6 +765,10 @@
                 <div class="stat-item">
                     <span>Expected Graduation:</span>
                     <span>🎓 May 2027</span>
+                </div>
+                <div class="stat-item">
+                    <span>Externship Completed:</span>
+                    <span>✅ Morgan Franklin Consulting</span>
                 </div>
             </div>
         </div>
@@ -765,7 +811,7 @@
                 🌐 Node.js (backend wizardry)<br>
                 🗄️ MySQL (relational database mastery)<br>
                 🔒 Cybersecurity Fundamentals (digital defense)<br>
-                📐 Verilog & VHDL (hardware sorcery)
+                📟 Verilog & VHDL (hardware sorcery)
             </p>
             
             <div class="bitmoji-container">
@@ -781,7 +827,7 @@
         <div class="comic-sound-effect" style="font-size: 1.8rem; color: #feca57; bottom: 30%; right: 20%; transform: rotate(18deg);">KAPOW!</div>
         
         <div class="comic-bubble">
-            <h2 class="chapter-title">CHAPTER 3: EPIC QUESTS! 🗡️</h2>
+            <h2 class="chapter-title">CHAPTER 3: EPIC QUESTS! ⚔️</h2>
             
             <p class="story-text">
                 Armed with her newfound powers, Kiishi embarked on legendary quests (a.k.a. "projects" for the muggles):
@@ -858,7 +904,15 @@
             
             <div class="leadership-grid">
                 <div class="leadership-card">
-                    <strong>🚺 Girls Who Code VP</strong>
+                    <strong>🏠 Resident Assistant Hero</strong>
+                    <div class="bitmoji-container small-bitmoji">
+                        <img src="assets/helper-Kiishi.png" alt="Kiishi helping diverse group of residents, welcoming pose" />
+                    </div>
+                    <p><strong>(Current Adventure!)</strong> Leveled up from peer mentoring to building entire residential communities! Now guiding students from diverse backgrounds through both life challenges and academic adventures. Like a real-life superhero for student success! 🏠✨</p>
+                </div>
+                
+                <div class="leadership-card">
+                    <strong>👩‍💻 Girls Who Code Co-President</strong>
                     <div class="bitmoji-container small-bitmoji">
                         <img src="assets/presenting-Kiishi.png" alt="Kiishi giving a presentation to a group" />
                     </div>
@@ -866,42 +920,97 @@
                 </div>
                 
                 <div class="leadership-card">
-                    <strong>💃 Social Chair Extraordinaire</strong>
-                    <div class="bitmoji-container small-bitmoji">
-                        <img src="assets/party-planner-Kiishi.png" alt="Kiishi planning events with party decorations" />
-                    </div>
-                    <p>Making engineering social one event at a time! Collaborating with the board to plan epic events and attending outreach activities. Who says techies can't party? 🎉</p>
-                </div>
-                
-                <div class="leadership-card">
-                    <strong>🎓 Peer Mentor Hero</strong>
+                    <strong>🎓 Former Peer Mentor Legend</strong>
                     <div class="bitmoji-container small-bitmoji">
                         <img src="assets/mentor-Kiishi.png" alt="Kiishi helping younger students, teaching pose" />
                     </div>
-                    <p>Guiding 20-25 freshmen through the coding wilderness! Leading classrooms, mentoring C programming projects, and fostering technical growth through hands-on coding sessions. Like a tech Gandalf! 🧙‍♀️</p>
+                    <p><strong>(Fall 2024 - Spring 2025)</strong> Guided 20-25 freshmen through the coding wilderness! Led classrooms, mentored programming projects, and fostered technical growth through hands-on coding sessions. Like a tech Gandalf! 🧙‍♀️</p>
+                </div>
+            </div>
+            
+            <p class="story-text" style="margin-top: 2rem;">
+                From mentoring individual coders to building entire communities - our hero's leadership journey shows the power of growth and impact! These skills would soon prove essential in her next adventure... 🌟
+            </p>
+        </div>
+    </div>
+
+    <!-- Chapter 5: The Cybersecurity Awakening -->
+    <div class="story-panel chapter-5-bg">
+        <!-- Comic Sound Effects -->
+        <div class="comic-sound-effect sound-secure">SECURE!</div>
+        <div class="comic-sound-effect sound-protected">PROTECTED!</div>
+        <div class="comic-sound-effect sound-defended">DEFENDED!</div>
+        
+        <div class="comic-bubble">
+            <h2 class="chapter-title">CHAPTER 5: THE CYBERSECURITY AWAKENING! 💥</h2>
+            
+            <div class="bitmoji-container">
+                <img src="assets/cybersecurity-Kiishi.png" alt="Kiishi in cybersecurity detective outfit with digital shield and magnifying glass" />
+            </div>
+            
+            <p class="story-text">
+                Armed with her leadership superpowers, our hero was ready for her biggest quest yet! 🕵️‍♀️
+                <br><br>
+                During a legendary expedition to <strong>Morgan Franklin Consulting</strong>, Kiishi applied all her mentoring and communication skills while unlocking the secrets of the digital realm!
+            </p>
+            
+            <div style="text-align: center; margin: 2rem 0;">
+                <div class="achievement-badge cyber-badge">🔐 IAM</div>
+                <div class="achievement-badge cyber-badge">📋 GRC</div>
+                <div class="achievement-badge cyber-badge">🛡️ CORE</div>
+                <div class="achievement-badge cyber-badge">🔍 CFC</div>
+                <div class="achievement-badge cyber-badge">🤖 AI Sec</div>
+            </div>
+            
+            <p class="story-text">
+                Her leadership experience made her the perfect consultant-in-training! She mastered:
+                <br>
+                🔐 <strong>Identity & Access Management (IAM)</strong> - Controlling who gets the keys to the kingdom<br>
+                📋 <strong>Governance, Risk & Compliance (GRC)</strong> - The rulebook for digital safety<br>
+                🛡️ <strong>Cyber Operations & Resilience (CORE)</strong> - Building unbreakable defenses<br>
+                🔍 <strong>Cyber Fusion Center (CFC)</strong> - Command center for digital warriors<br>
+                🤖 <strong>AI Security</strong> - Protecting the future from cyber villains
+                <br><br>
+                Now she stands as the ultimate tech superhero - a leader who codes, creates, protects, and guides others! ⚔️✨
+            </p>
+            
+            <div class="stats-box">
+                <div class="stat-item">
+                    <span>Leadership + Tech Combo:</span>
+                    <span>🎯 LEGENDARY STATUS!</span>
+                </div>
+                <div class="stat-item">
+                    <span>Consulting Skills:</span>
+                    <span>💼 Professional Grade!</span>
+                </div>
+                <div class="stat-item">
+                    <span>Digital Defense Power:</span>
+                    <span>🛡️ MAXIMUM SECURITY!</span>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Chapter 5: The Future Awaits -->
-    <div class="story-panel chapter-5-bg">
+    <!-- Chapter 6: The Future Awaits -->
+    <div class="story-panel chapter-6-bg">
         <div class="comic-bubble">
-            <h2 class="chapter-title" style="color: #6a4c93;">CHAPTER 5: THE FUTURE AWAITS! 🚀</h2>
+            <h2 class="chapter-title" style="color: #6a4c93;">CHAPTER 6: THE FUTURE AWAITS! 🚀</h2>
             
             <div class="bitmoji-container">
                 <img src="assets/future-tech-Kiishi.png" alt="Kiishi in a futuristic tech setting with AI symbols floating around" />
             </div>
             
             <p class="story-text">
-                But wait! The adventure is far from over! Our hero has set her sights on even greater challenges...
+                But wait! The adventure is far from over! Fresh from mastering the cybersecurity realm at Morgan Franklin Consulting, our hero has set her sights on even greater challenges...
                 <br><br>
                 🤖 <strong>MASTER'S IN ARTIFICIAL INTELLIGENCE</strong> (Coming 2027!)
                 <br>
                 🛡️ <strong>CYBERSECURITY MINOR</strong> (Because hackers beware!)
+                <br>
+                🏠 <strong>RESIDENTIAL COMMUNITY LEADERSHIP</strong> (Current superpower!)
                 <br><br>
-                What epic adventures await in the world of AI? Will Kiishi become the ultimate tech superhero? 
-                Will she solve world hunger with an algorithm? Will she teach robots to make the perfect cup of coffee? ☕
+                Will she revolutionize AI security? Will she build the most supportive residential community ever? 
+                Will she teach robots proper cybersecurity hygiene? Will she solve world hunger with an algorithm? ☕
             </p>
             
             <div class="contact-section">
@@ -911,7 +1020,7 @@
                     <img src="assets/professional-wave-Kiishi.png" alt="Kiishi waving with a friendly smile, professional but approachable" />
                 </div>
                 
-                <p style="margin: 1.5rem 0; color: #333;">Looking for internships, collaborations, or just want to chat about tech, leadership, or the best coffee shops near Iowa State?</p>
+                <p style="margin: 1.5rem 0; color: #333;">Looking for internships, collaborations, or just want to chat about tech, cybersecurity, leadership, or the best coffee shops near Iowa State?</p>
                 
                 <div class="contact-grid">
                     <div class="contact-item">
@@ -965,11 +1074,12 @@
                 </div>
                 
                 <div style="background: rgba(106, 76, 147, 0.1); padding: 2rem; border-radius: 20px; border: 3px dashed #6a4c93; margin: 2rem 0;">
-                    <h3 style="font-family: 'Bangers', cursive; font-size: 2rem; color: #6a4c93; margin-bottom: 1rem;">🎬 END OF EPISODE 1 🎬</h3>
+                    <h3 style="font-family: 'Bangers', cursive; font-size: 2rem; color: #6a4c93; margin-bottom: 1rem;">🎬 SEASON 2 PREVIEW 🎬</h3>
                     <p style="font-size: 1.2rem; color: #333; line-height: 1.6; margin-bottom: 1rem;">
-                        Will our hero conquer the world of AI? 🤖<br>
-                        Will she revolutionize cybersecurity? 🛡️<br>
-                        Will she change the tech world forever? 🌍
+                        🛡️ Just unlocked cybersecurity consulting powers at Morgan Franklin!<br>
+                        🏠 Currently building epic residential communities as an RA!<br>
+                        🎓 Approaching senior year with AI mastery in sight!<br>
+                        🤖 Will our hero become the ultimate AI-powered cybersecurity superhero?
                     </p>
                     <p style="font-style: italic; color: #9d4edd; font-size: 1.1rem;">
                         Find out in the next thrilling chapter of Kiishi's tech adventure!
