@@ -450,10 +450,29 @@
             margin-bottom: 0.5rem;
         }
         
-        .contact-item span {
+        .contact-item a {
             color: #6a4c93;
+            text-decoration: none;
             font-family: 'Courier New', monospace;
             font-size: 0.9rem;
+            transition: all 0.3s ease;
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 10px;
+            border: 2px solid transparent;
+            background: rgba(106, 76, 147, 0.05);
+        }
+        
+        .contact-item a:hover {
+            color: #ffffff;
+            background: #6a4c93;
+            border-color: #333;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(106, 76, 147, 0.3);
+        }
+        
+        .contact-item a:active {
+            transform: translateY(0px);
         }
         
         .finale-box {
@@ -1238,3 +1257,4 @@
     </script>
 </body>
 </html>
+
