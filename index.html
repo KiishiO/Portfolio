@@ -584,7 +584,7 @@
             50% { transform: scale(1.1); }
         }
         
-        /* Responsive Design */
+      /* Mobile-specific improvements */
         @media (max-width: 768px) {
             .main-title {
                 font-size: 2.5rem;
@@ -595,13 +595,39 @@
             }
             
             .comic-bubble {
-                max-width: 90%;
+                max-width: 95%;
                 padding: 1.2rem;
                 margin: 0 auto;
+                /* Enhanced mobile bubble styling */
+                transform: rotate(0deg);
+                box-shadow: 
+                    0 10px 25px rgba(0, 0, 0, 0.15),
+                    inset 0 0 0 2px rgba(255, 255, 255, 0.9);
+            }
+            
+            /* Mobile-specific bubble tail positioning */
+            .comic-bubble::before {
+                left: 25px;
+                border-left-width: 15px;
+                border-right-width: 15px;
+                border-top-width: 15px;
+            }
+            
+            .story-panel {
+                min-height: auto;
+                padding: 1.5rem 1rem;
+                /* Enhance mobile panel experience */
+                background-attachment: scroll;
+            }
+            
+            /* Reduce transition overlays on mobile */
+            .story-panel::after,
+            .story-panel::before {
+                height: 50px;
             }
             
             .title-content {
-                max-width: 90%;
+                max-width: 95%;
                 padding: 2rem;
             }
             
@@ -632,24 +658,36 @@
                 flex-direction: column;
             }
             
+            .leadership-card {
+                min-width: 100%;
+            }
+            
             .contact-grid {
                 flex-direction: column;
-                gap: 0.5rem;
+                gap: 0.8rem;
             }
             
             .contact-section {
                 padding: 1.5rem;
                 margin: 1rem auto;
-                max-width: 90%;
+                max-width: 95%;
             }
             
             .contact-item {
                 padding: 0.8rem;
+                width: 100%;
             }
             
-            .contact-item span {
-                font-size: 0.8rem;
+            .contact-item a {
+                font-size: 0.85rem;
+                padding: 0.8rem 1.2rem;
                 word-break: break-all;
+                /* Better mobile link styling */
+                border-radius: 15px;
+                min-height: 48px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
             }
             
             .story-text {
@@ -666,25 +704,55 @@
             
             .comic-sound-effect {
                 font-size: 1.5rem !important;
+                /* Adjust positioning for mobile */
+                position: absolute;
             }
             
             .sound-boom, .sound-pow, .sound-zap, .sound-bang, .sound-secure, .sound-protected, .sound-defended {
                 font-size: 1.5rem !important;
+            }
+            
+            /* Mobile achievement badges */
+            .achievement-badge {
+                width: 65px;
+                height: 65px;
+                font-size: 0.9rem;
+                margin: 0.3rem;
+            }
+            
+            .cyber-badge {
+                font-size: 0.8rem;
+            }
+            
+            /* Mobile stats box */
+            .stats-box {
+                padding: 1rem;
+                font-size: 0.9rem;
+            }
+            
+            .stat-item {
+                flex-direction: column;
+                text-align: center;
+                margin: 0.8rem 0;
+                gap: 0.3rem;
             }
         }
         
         @media (max-width: 480px) {
             .main-title {
                 font-size: 2rem;
+                line-height: 1.1;
             }
             
             .chapter-title {
                 font-size: 1.6rem;
+                line-height: 1.2;
             }
             
             .comic-bubble {
-                max-width: 95%;
+                max-width: 98%;
                 padding: 1rem;
+                margin: 0.5rem auto;
             }
             
             .title-content {
@@ -712,6 +780,23 @@
             
             .project-box {
                 padding: 1rem;
+            }
+            
+            .story-text {
+                font-size: 1rem;
+                line-height: 1.4;
+            }
+            
+            .subtitle {
+                font-size: 1.2rem;
+                line-height: 1.3;
+            }
+            
+            /* Ultra-mobile contact links */
+            .contact-item a {
+                font-size: 0.8rem;
+                padding: 1rem;
+                margin: 0.2rem 0;
             }
         }
     </style>
@@ -1257,4 +1342,5 @@
     </script>
 </body>
 </html>
+
 
