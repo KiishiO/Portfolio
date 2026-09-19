@@ -112,6 +112,13 @@
             background-color: red;
         }
         
+        .chapter-internship-bg {
+            background: 
+                linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)),
+                url('./assets/comic-panel-blue.jpg') center/cover;
+            background-color: #00cec9;
+        }
+        
         .chapter-6-bg {
             background: 
                 linear-gradient(rgba(255,255,255,0.1), rgba(255,255,255,0.1)),
@@ -378,6 +385,10 @@
             text-shadow: 1px 1px 0px rgba(255, 255, 255, 0.8);
             margin-bottom: 1rem;
             font-size: 1.3rem;
+        }
+        
+        .project-box-wide {
+            grid-column: 1 / -1;
         }
         
         .tech-stack {
@@ -799,6 +810,64 @@
                 margin: 0.2rem 0;
             }
         }
+        
+        /* Grouped skills (Chapter 2) */
+        .skill-group {
+            margin: 1.8rem 0;
+            text-align: center;
+        }
+        
+        .skill-group h3 {
+            font-family: 'Bangers', cursive;
+            font-size: 1.6rem;
+            letter-spacing: 1px;
+            color: #333;
+            text-shadow: 2px 2px 0px #ffffff;
+            margin-bottom: 0.3rem;
+        }
+        
+        .skill-note {
+            font-size: 1rem;
+            font-style: italic;
+            color: #333;
+            margin: 0.4rem 0 0.9rem;
+            text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+        }
+        
+        .skill-chips {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+        
+        .skill-chip {
+            background: rgba(255, 255, 255, 0.92);
+            border: 2px solid #333;
+            border-radius: 12px;
+            padding: 0.3rem 0.75rem;
+            font-weight: bold;
+            font-size: 0.95rem;
+            color: #333;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .skill-group.bonus .skill-chip {
+            background: rgba(255, 255, 255, 0.7);
+            border-style: dashed;
+            font-weight: normal;
+        }
+        
+        @media (max-width: 480px) {
+            .skill-group h3 {
+                font-size: 1.4rem;
+            }
+            
+            .skill-chip {
+                font-size: 0.85rem;
+                padding: 0.25rem 0.6rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -820,13 +889,14 @@
         <div class="title-content">
             <h1 class="main-title">THE ADVENTURES OF Kiishi</h1>
             <p class="subtitle">From Code Newbie to Tech Superhero 🚀</p>
+            <p class="subtitle" style="margin-top: -1rem; color: #6a4c93;">🎓 Senior Year Edition</p>
             
             <div class="title-bitmoji">
                 <img src="assets/superhero-Kiishi.png" alt="Kiishi in superhero pose with cape" />
             </div>
             
             <p style="font-size: 1.2rem; color: #333; margin-top: 1rem;">
-                Scroll down to begin the epic journey! ⬇️
+                Scroll down to start the story ⬇️
             </p>
         </div>
     </div>
@@ -845,7 +915,7 @@
             </div>
             
             <p class="story-text">
-                Once upon a time, there was a <strong>junior</strong> named Kiishi who thought computers were just for social media and Netflix...
+                Once upon a time, there was a <strong>girl</strong> named Kiishi who thought computers were just for social media and Netflix...
                 <br><br>
                 <strong>UNTIL ONE FATEFUL DAY!</strong> 🎭
                 <br><br>
@@ -856,15 +926,15 @@
             <div class="stats-box">
                 <div class="stat-item">
                     <span>Current Status:</span>
-                    <span>🎮 Junior Year - Leveling Up!</span>
+                    <span>🎮 Senior Year - Final Boss Level!</span>
                 </div>
                 <div class="stat-item">
                     <span>Excitement Level:</span>
-                    <span>📈 OVER 9000!</span>
+                    <span>📈 Still climbing</span>
                 </div>
                 <div class="stat-item">
                     <span>Current GPA:</span>
-                    <span>⭐ 3.70 (Pretty darn good!)</span>
+                    <span>⭐ 3.60 (Pretty darn good!)</span>
                 </div>
                 <div class="stat-item">
                     <span>Expected Graduation:</span>
@@ -872,7 +942,11 @@
                 </div>
                 <div class="stat-item">
                     <span>Externship Completed:</span>
-                    <span>✅ Morgan Franklin Consulting</span>
+                    <span>✅ MorganFranklin Cyber</span>
+                </div>
+                <div class="stat-item">
+                    <span>Current Internship:</span>
+                    <span>💻 Kingland</span>
                 </div>
             </div>
         </div>
@@ -892,31 +966,64 @@
             </div>
             
             <p class="story-text">
-                Like a video game character collecting power-ups, Kiishi began mastering the ancient arts of programming and started her journey into CYBERSECURITY ENGINEERING as well! 
-                Even as she took on her new minor, each language she learned only made her stronger! 💪
+                Like a video game character collecting power-ups, Kiishi kept adding to her toolkit. She started with programming, picked up a Cybersecurity Engineering minor along the way, and found that each new language made the next one easier. 💪
             </p>
             
-            <div style="text-align: center; margin: 2rem 0;">
-                <div class="achievement-badge">C</div>
-                <div class="achievement-badge">Java</div>
-                <div class="achievement-badge">Python</div>
-                <div class="achievement-badge">JS</div>
-                <div class="achievement-badge">HTML</div>
-                <div class="achievement-badge">CSS</div>
+            <div class="skill-group">
+                <h3>LANGUAGES</h3>
+                <div>
+                    <div class="achievement-badge">Java</div>
+                    <div class="achievement-badge">C/C++</div>
+                    <div class="achievement-badge">C#</div>
+                    <div class="achievement-badge">Python</div>
+                    <div class="achievement-badge">JS/TS</div>
+                    <div class="achievement-badge">HTML</div>
+                    <div class="achievement-badge">CSS</div>
+                    <div class="achievement-badge">Bash</div>
+                    <div class="achievement-badge">MySQL</div>
+                </div>
+                <p class="skill-note">JS/TS is JavaScript and TypeScript, and Bash is for shell scripting.</p>
             </div>
             
-            <p class="story-text">
-                But wait, there's more! She also gained mystical powers in:
-                <br>
-                🔧 Git (for when she inevitably breaks everything)<br>
-                ⚛️ React (because who doesn't love components?)<br>
-                🍃 MongoDB (where data goes to party)<br>
-                📱 Android Studio (mobile magic!)<br>
-                🌐 Node.js (backend wizardry)<br>
-                🗄️ MySQL (relational database mastery)<br>
-                🔒 Cybersecurity Fundamentals (digital defense)<br>
-                📟 Verilog & VHDL (hardware sorcery)
-            </p>
+            <div class="skill-group">
+                <h3>TOOLS & PRACTICES</h3>
+                <p class="skill-note">Version control, for when she inevitably breaks everything.</p>
+                <div class="skill-chips">
+                    <span class="skill-chip">Git & GitHub</span>
+                    <span class="skill-chip">Agile/Scrum</span>
+                    <span class="skill-chip">React</span>
+                    <span class="skill-chip">Angular</span>
+                    <span class="skill-chip">Node.js</span>
+                    <span class="skill-chip">MongoDB</span>
+                    <span class="skill-chip">Android Studio</span>
+                    <span class="skill-chip">Unity</span>
+                    <span class="skill-chip">Figma</span>
+                </div>
+            </div>
+            
+            <div class="skill-group">
+                <h3>SECURITY TOOLKIT</h3>
+                <p class="skill-note">Learning to think like an attacker so she can defend against one.</p>
+                <div class="skill-chips">
+                    <span class="skill-chip">Red Team/Blue Team Exercises</span>
+                    <span class="skill-chip">Vulnerability Assessment</span>
+                    <span class="skill-chip">Penetration Testing Methodology</span>
+                    <span class="skill-chip">Nmap</span>
+                    <span class="skill-chip">Nessus</span>
+                    <span class="skill-chip">Metasploit</span>
+                    <span class="skill-chip">Hydra</span>
+                    <span class="skill-chip">Social Engineering Toolkit (SET)</span>
+                </div>
+            </div>
+            
+            <div class="skill-group bonus">
+                <h3>BONUS ROUND</h3>
+                <p class="skill-note">Yes, hardware too. It was a sophomore-year class, so consider it a bonus.</p>
+                <div class="skill-chips">
+                    <span class="skill-chip">Verilog</span>
+                    <span class="skill-chip">VHDL</span>
+                </div>
+            </div>
             
             <div class="bitmoji-container">
                 <img src="assets/tech-magic-surrounded.png" alt="Kiishi surrounded by floating tech logos looking amazed" />
@@ -934,20 +1041,32 @@
             <h2 class="chapter-title">CHAPTER 3: EPIC QUESTS! ⚔️</h2>
             
             <p class="story-text">
-                Armed with her newfound powers, Kiishi embarked on legendary quests (a.k.a. "projects" for the muggles):
+                With her new skills in hand, Kiishi took on a few quests (a.k.a. "projects," for the non-adventurers):
             </p>
             
             <div class="projects-grid">
+                <div class="project-box">
+                    <h3>🧁 CY'S CAKERIA</h3>
+                    <div class="bitmoji-container small-bitmoji">
+                        <img src="assets/Kiishi-with-cake.png" alt="Kiishi with some cake" />
+                    </div>
+                    <p>Built a 2D game in a 24-hour hackathon, modeled after the well-known Papa's Games universe, with a team of four. Kiishi had never used Unity or C# before the clock started, and the team still delivered a working game by the deadline.</p>
+                    <div class="tech-stack">
+                        <strong>Tech Arsenal:</strong> C# | Unity | Figma
+                    </div>
+                    <p style="margin-top: auto;"><em>Achievement Unlocked:</em> Best Innovation Award 🏆</p>
+                </div>
+                
                 <div class="project-box">
                     <h3>🌍 CY'S WORLD ADVENTURE</h3>
                     <div class="bitmoji-container small-bitmoji">
                         <img src="assets/team-builder-Kiishi.png" alt="Kiishi building something with tools, teamwork pose" />
                     </div>
-                    <p>Collaborated with a team of four to develop an Android app designed as a comprehensive toolkit for students and teachers, inspired by the existing MyState app.</p>
+                    <p>Worked with a team of four to build an Android app that acts as a toolkit for students and teachers, inspired by the existing MyState app.</p>
                     <div class="tech-stack">
                         <strong>Tech Arsenal:</strong> Java | SpringBoot | Android Studio | MySQL
                     </div>
-                    <p style="margin-top: auto;"><em>Achievement Unlocked:</em> Full-stack mobile development mastery! 📱✨</p>
+                    <p style="margin-top: auto;"><em>Achievement Unlocked:</em> Best Heart Award, for outstanding team collaboration and project impact 💖</p>
                 </div>
                 
                 <div class="project-box">
@@ -955,23 +1074,11 @@
                     <div class="bitmoji-container small-bitmoji">
                         <img src="assets/gaming-guru-Kiishi.png" alt="Kiishi as a gaming character with controller" />
                     </div>
-                    <p>Built an entire digital storefront and distribution platform for buying and playing video games! Complete with user authentication, game libraries, and purchasing systems.</p>
+                    <p>Built a digital storefront and distribution platform for buying and playing video games, with a team of two. It has user authentication, game libraries, and a purchasing system.</p>
                     <div class="tech-stack">
                         <strong>Tech Arsenal:</strong> MongoDB | Express.js | React | Node.js (MERN Stack)
                     </div>
-                    <p style="margin-top: auto;"><em>Achievement Unlocked:</em> E-commerce platform architect! 🏪🎯</p>
-                </div>
-                
-                <div class="project-box">
-                    <h3>📚 THE STORY LAB CHRONICLES</h3>
-                    <div class="bitmoji-container small-bitmoji">
-                        <img src="assets/storyteller-Kiishi.png" alt="Kiishi reading a book with sparkles around" />
-                    </div>
-                    <p>Conceptualized an innovative educational online-based game platform for kids and classrooms that seamlessly integrates literature and technology.</p>
-                    <div class="tech-stack">
-                        <strong>Vision Stack:</strong> Educational Technology | Game Design | Literature Integration
-                    </div>
-                    <p style="margin-top: auto;"><em>Achievement Unlocked:</em> EdTech visionary! 🎓🌟</p>
+                    <p style="margin-top: auto;"><em>Achievement Unlocked:</em> A full-stack online store, from login to purchase 🏪</p>
                 </div>
                 
                 <div class="project-box">
@@ -979,11 +1086,23 @@
                     <div class="bitmoji-container small-bitmoji">
                         <img src="assets/detective-Kiishi.png" alt="Kiishi as detective with magnifying glass" />
                     </div>
-                    <p>Created the backend design and wireframe for a web-based murder mystery game. Players become detectives, gathering clues and solving intricate mysteries!</p>
+                    <p>Worked with a team of four to build a web-based murder mystery game, mainly in HTML, where players act as detectives, gather clues, and solve the case. Kiishi's part: the wireframes and backend design.</p>
                     <div class="tech-stack">
                         <strong>Design Arsenal:</strong> Figma | Backend Architecture | Game Logic Design
                     </div>
-                    <p style="margin-top: auto;"><em>Achievement Unlocked:</em> Mystery architect! 🔍🎯</p>
+                    <p style="margin-top: auto;"><em>Achievement Unlocked:</em> Mystery architect 🔍</p>
+                </div>
+                
+                <div class="project-box project-box-wide">
+                    <h3>📚 THE STORY LAB CHRONICLES</h3>
+                    <div class="bitmoji-container small-bitmoji">
+                        <img src="assets/storyteller-Kiishi.png" alt="Kiishi reading a book with sparkles around" />
+                    </div>
+                    <p>Came up with the concept for an online educational game platform for kids and classrooms that blends literature and technology.</p>
+                    <div class="tech-stack">
+                        <strong>Vision Stack:</strong> Educational Technology | Game Design | Literature Integration
+                    </div>
+                    <p style="margin-top: auto;"><em>Achievement Unlocked:</em> EdTech idea-maker 🎓</p>
                 </div>
             </div>
         </div>
@@ -1003,7 +1122,7 @@
             </div>
             
             <p class="story-text">
-                Plot twist! Our hero discovered she had LEADERSHIP SUPERPOWERS! 🦸‍♀️
+                Plot twist: it turns out Kiishi likes leading, too. 🦸‍♀️
             </p>
             
             <div class="leadership-grid">
@@ -1012,7 +1131,7 @@
                     <div class="bitmoji-container small-bitmoji">
                         <img src="assets/helper-Kiishi.png" alt="Kiishi helping diverse group of residents, welcoming pose" />
                     </div>
-                    <p><strong>(Current Adventure!)</strong> Leveled up from peer mentoring to building entire residential communities! Now guiding students from diverse backgrounds through both life challenges and academic adventures. Like a real-life superhero for student success! 🏠✨</p>
+                    <p><strong>(Current Adventure)</strong> Responsible for 40-45 residents, building community and guiding them through both life challenges and academic ones.</p>
                 </div>
                 
                 <div class="leadership-card">
@@ -1020,20 +1139,28 @@
                     <div class="bitmoji-container small-bitmoji">
                         <img src="assets/presenting-Kiishi.png" alt="Kiishi giving a presentation to a group" />
                     </div>
-                    <p>Leading the charge for women in tech! Overseeing officer activities, serving as Risk Management Officer, and working with the board to guide club initiatives. Because girl power isn't just a song! 🎵</p>
+                    <p><strong>(Spring 2024 - Present)</strong> Helps lead a club for women in tech: overseeing club operations and strategic planning, coordinating technical workshops and corporate sponsorship outreach, and managing risk assessment and industry partnerships.</p>
                 </div>
                 
                 <div class="leadership-card">
-                    <strong>🎓 Former Peer Mentor Legend</strong>
+                    <strong>🌟 Digital Women in Engineering VP</strong>
+                    <div class="bitmoji-container small-bitmoji">
+                        <img src="assets/baseball-wave-Kiishi.png" alt="Kiishi waving with a friendly smile, rooting for you" />
+                    </div>
+                    <p><strong>(Fall 2026 - Present)</strong> Partners with the President to run meetings and lead the organization's activities, and steps in to lead whenever the President is away. Basically the co-pilot.</p>
+                </div>
+                
+                <div class="leadership-card">
+                    <strong>🎓 Former Peer Mentor</strong>
                     <div class="bitmoji-container small-bitmoji">
                         <img src="assets/mentor-Kiishi.png" alt="Kiishi helping younger students, teaching pose" />
                     </div>
-                    <p><strong>(Fall 2024 - Spring 2025)</strong> Guided 20-25 freshmen through the coding wilderness! Led classrooms, mentored programming projects, and fostered technical growth through hands-on coding sessions. Like a tech Gandalf! 🧙‍♀️</p>
+                    <p><strong>(Fall 2024 - Spring 2025)</strong> Guided 20-25 freshmen through the coding wilderness: led classrooms, mentored programming projects, and ran hands-on coding sessions. Think tech Gandalf. 🧙‍♀️</p>
                 </div>
             </div>
             
             <p class="story-text" style="margin-top: 2rem;">
-                From mentoring individual coders to building entire communities - our hero's leadership journey shows the power of growth and impact! These skills would soon prove essential in her next adventure... 🌟
+                Over time the scope kept growing, from mentoring a classroom of freshmen to helping lead whole organizations and communities. 🌟
             </p>
         </div>
     </div>
@@ -1053,9 +1180,9 @@
             </div>
             
             <p class="story-text">
-                Armed with her leadership superpowers, our hero was ready for her biggest quest yet! 🕵️‍♀️
+                Next up: cybersecurity, up close. 🕵️‍♀️
                 <br><br>
-                During a legendary expedition to <strong>Morgan Franklin Consulting</strong>, Kiishi applied all her mentoring and communication skills while unlocking the secrets of the digital realm!
+                In May 2025, Kiishi completed an intensive <strong>Cyber Security Consulting Externship</strong> with <strong>MorganFranklin Cyber</strong>, working through five core areas of the field:
             </p>
             
             <div style="text-align: center; margin: 2rem 0;">
@@ -1067,54 +1194,106 @@
             </div>
             
             <p class="story-text">
-                Her leadership experience made her the perfect consultant-in-training! She mastered:
-                <br>
-                🔐 <strong>Identity & Access Management (IAM)</strong> - Controlling who gets the keys to the kingdom<br>
-                📋 <strong>Governance, Risk & Compliance (GRC)</strong> - The rulebook for digital safety<br>
-                🛡️ <strong>Cyber Operations & Resilience (CORE)</strong> - Building unbreakable defenses<br>
-                🔍 <strong>Cyber Fusion Center (CFC)</strong> - Command center for digital warriors<br>
-                🤖 <strong>AI Security</strong> - Protecting the future from cyber villains
+                🔐 <strong>Identity & Access Management (IAM)</strong> - deciding who gets the keys to the kingdom<br>
+                📋 <strong>Governance, Risk & Compliance (GRC)</strong> - the rulebook for digital safety<br>
+                🛡️ <strong>Cyber Operations & Resilience (CORE)</strong> - building defenses that hold up<br>
+                🔍 <strong>Cyber Fusion Center (CFC)</strong> - the command center<br>
+                🤖 <strong>AI Security</strong> - protecting the future from cyber villains
                 <br><br>
-                Now she stands as the ultimate tech superhero - a leader who codes, creates, protects, and guides others! ⚔️✨
+                She also got exposure to risk management, compliance frameworks, and breach response methods, and talked with industry experts about critical infrastructure protection and consulting approaches.
             </p>
             
             <div class="stats-box">
                 <div class="stat-item">
-                    <span>Leadership + Tech Combo:</span>
-                    <span>🎯 LEGENDARY STATUS!</span>
+                    <span>Program:</span>
+                    <span>🕵️‍♀️ Cyber Security Consulting Externship</span>
                 </div>
                 <div class="stat-item">
-                    <span>Consulting Skills:</span>
-                    <span>💼 Professional Grade!</span>
+                    <span>When:</span>
+                    <span>📅 May 2025</span>
                 </div>
                 <div class="stat-item">
-                    <span>Digital Defense Power:</span>
-                    <span>🛡️ MAXIMUM SECURITY!</span>
+                    <span>Focus Areas:</span>
+                    <span>🔐 IAM, GRC, CORE, CFC & AI Security</span>
                 </div>
             </div>
         </div>
     </div>
 
-    <!-- Chapter 6: The Future Awaits -->
+    <!-- Chapter 6: The Internship Quest -->
+    <div class="story-panel chapter-internship-bg">
+        <!-- Comic Sound Effects -->
+        <div class="comic-sound-effect" style="font-size: 2.2rem; color: #ff6b9d; top: 16%; right: 10%; transform: rotate(-10deg);">SHIPPED!</div>
+        <div class="comic-sound-effect" style="font-size: 2rem; color: #feca57; bottom: 22%; left: 9%; transform: rotate(16deg);">COMMIT!</div>
+        
+        <div class="comic-bubble">
+            <h2 class="chapter-title">CHAPTER 6: THE INTERNSHIP QUEST! 💻</h2>
+            
+            <div class="bitmoji-container">
+                <img src="assets/boxing-ring-Kiishi.png" alt="Kiishi boxing" />
+            </div>
+            
+            <p class="story-text">
+                Next up: a real-world mission. 🏢
+                <br><br>
+                Kiishi joined Kingland as an <strong>Advanced Software Engineering Intern</strong>. Kingland builds enterprise software that helps banks, financial institutions, insurers, and global accounting firms manage their data, risk, and regulatory compliance. No more practice levels - this was the real thing!
+            </p>
+            
+            <div style="text-align: center; margin: 2rem 0;">
+                <div class="achievement-badge">Java</div>
+                <div class="achievement-badge">TS</div>
+                <div class="achievement-badge">Angular</div>
+            </div>
+            
+            <p class="story-text">
+                Day to day, Kiishi builds full-stack features for a cloud-based enterprise application, works alongside full-time engineers in a production environment, and implements security enhancements and defect fixes to keep the application reliable. 🧑‍💻
+            </p>
+            
+            <div class="stats-box">
+                <div class="stat-item">
+                    <span>Role:</span>
+                    <span>💻 Advanced Software Engineering Intern</span>
+                </div>
+                <div class="stat-item">
+                    <span>Industries Served:</span>
+                    <span>🏦 Finance, Insurance & Public Accounting</span>
+                </div>
+                <div class="stat-item">
+                    <span>Tech Arsenal:</span>
+                    <span>☕ Java | TypeScript | Angular</span>
+                </div>
+                <div class="stat-item">
+                    <span>Status:</span>
+                    <span>🔁 Ongoing since May 2026</span>
+                </div>
+            </div>
+            
+            <p class="story-text">
+                <strong>PLOT TWIST:</strong> The story continues. Kiishi is still at Kingland part-time while she finishes senior year. 📚
+            </p>
+        </div>
+    </div>
+
+    <!-- Chapter 7: The Future Awaits -->
     <div class="story-panel chapter-6-bg">
         <div class="comic-bubble">
-            <h2 class="chapter-title" style="color: #6a4c93;">CHAPTER 6: THE FUTURE AWAITS! 🚀</h2>
+            <h2 class="chapter-title" style="color: #6a4c93;">CHAPTER 7: THE FUTURE AWAITS! 🚀</h2>
             
             <div class="bitmoji-container">
                 <img src="assets/future-tech-Kiishi.png" alt="Kiishi in a futuristic tech setting with AI symbols floating around" />
             </div>
             
             <p class="story-text">
-                But wait! The adventure is far from over! Fresh from mastering the cybersecurity realm at Morgan Franklin Consulting, our hero has set her sights on even greater challenges...
+                But wait, the story isn't over. With MorganFranklin Cyber behind her and her Kingland internship still going, Kiishi is now in her <strong>SENIOR YEAR</strong> with plenty left on the to-do list...
                 <br><br>
-                🤖 <strong>MASTER'S IN ARTIFICIAL INTELLIGENCE</strong> (Coming 2027!)
+                💻 <strong>KINGLAND INTERNSHIP</strong> (Still going, alongside classes)
                 <br>
                 🛡️ <strong>CYBERSECURITY MINOR</strong> (Because hackers beware!)
                 <br>
-                🏠 <strong>RESIDENTIAL COMMUNITY LEADERSHIP</strong> (Current superpower!)
+                🏠 <strong>RESIDENTIAL COMMUNITY LEADERSHIP</strong> (Current superpower)
                 <br><br>
-                Will she revolutionize AI security? Will she build the most supportive residential community ever? 
-                Will she teach robots proper cybersecurity hygiene? Will she solve world hunger with an algorithm? ☕
+                Will she graduate with her sanity intact? Will she build the most supportive residential community on campus? 
+                Will she solve world hunger with an algorithm? (The coffee will help.) ☕
             </p>
             
             <div class="contact-section">
@@ -1124,7 +1303,7 @@
                     <img src="assets/professional-wave-Kiishi.png" alt="Kiishi waving with a friendly smile, professional but approachable" />
                 </div>
                 
-                <p style="margin: 1.5rem 0; color: #333;">Looking for internships, collaborations, or just want to chat about tech, cybersecurity, leadership, or the best coffee shops near Iowa State?</p>
+                <p style="margin: 1.5rem 0; color: #333;">Looking for full-time roles (internships considered too), collaborations, or just want to chat about tech, cybersecurity, leadership, or the best coffee shops near Iowa State?</p>
                 
                 <div class="contact-grid">
                     <div class="contact-item">
@@ -1151,7 +1330,7 @@
                 
                 <div style="margin-top: 2rem; padding: 1rem; background: rgba(106, 76, 147, 0.1); border-radius: 10px; border: 2px dashed #6a4c93;">
                     <p style="font-size: 0.9rem; color: #6a4c93; margin: 0;">
-                        💡 <strong>Want to connect directly?</strong> Find me through LinkedIn or GitHub for the fastest response!
+                        💡 <strong>Want to connect directly?</strong> LinkedIn is the fastest way to reach me!
                     </p>
                 </div>
             </div>
@@ -1180,13 +1359,14 @@
                 <div style="background: rgba(106, 76, 147, 0.1); padding: 2rem; border-radius: 20px; border: 3px dashed #6a4c93; margin: 2rem 0;">
                     <h3 style="font-family: 'Bangers', cursive; font-size: 2rem; color: #6a4c93; margin-bottom: 1rem;">🎬 SEASON 2 PREVIEW 🎬</h3>
                     <p style="font-size: 1.2rem; color: #333; line-height: 1.6; margin-bottom: 1rem;">
-                        🛡️ Just unlocked cybersecurity consulting powers at Morgan Franklin!<br>
-                        🏠 Currently building epic residential communities as an RA!<br>
-                        🎓 Approaching senior year with AI mastery in sight!<br>
-                        🤖 Will our hero become the ultimate AI-powered cybersecurity superhero?
+                        🎓 May 2027: graduation day.<br>
+                        💻 The Kingland internship continues alongside senior year.<br>
+                        🛡️ Software engineering and cybersecurity, side by side.<br>
+                        🚀 Up next: life after graduation.<br>
+                        🦸‍♀️ Will our hero become the ultimate cybersecurity superhero?
                     </p>
                     <p style="font-style: italic; color: #9d4edd; font-size: 1.1rem;">
-                        Find out in the next thrilling chapter of Kiishi's tech adventure!
+                        Find out in the next chapter of Kiishi's tech adventure.
                     </p>
                 </div>
                 
@@ -1342,5 +1522,3 @@
     </script>
 </body>
 </html>
-
-
